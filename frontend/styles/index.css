@@ -5,7 +5,7 @@
   --primary-dark: #1b5e20; /* Darker shade of Forest Green */
   --secondary-color: #8d6e63; /* Earthy Brown */
   --secondary-light: #a1887f; /* Lighter shade of Earthy Brown */
-  --accent-color: #1d9a21; /* Accent color (can be adjusted) */
+  --accent-color: #ffb29b; /* Accent color (can be adjusted) */
   --background-color: #faf3e0; /* Soft Cream */
   --card-bg: #ffffff; /* White for cards */
   --text-primary: #2e7d32; /* Forest Green for text */
@@ -59,7 +59,7 @@ button {
 }
 
 .navbar.scrolled {
-  background-color: var(--background-color); /* Forest Green with opacity */
+  background-color: var(--accent-color); /* Forest Green with opacity */
   box-shadow: var(--shadow);
 }
 
@@ -123,7 +123,7 @@ button {
 
 /* Sections with Background GIFs */
 .section-with-bg {
-  min-height: 70vh; /* 70% of the viewport height */
+  /* min-height: 70vh; 70% of the viewport height */
   padding-top: 80px; /* Adjust based on navbar height */
   background-size: cover;
   background-position: center;
