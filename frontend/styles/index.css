@@ -1,17 +1,17 @@
 /* CSS Variables */
 :root {
-  --primary-color: #6200ea;
-  --primary-light: #7c43ea;
-  --primary-dark: #3700b3;
-  --secondary-color: #ff8a00;
-  --secondary-light: #ffa33c;
-  --accent-color: #00c853;
-  --background-color: #f8f9ff;
-  --card-bg: #ffffff;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-light: #888888;
-  --white: #ffffff;
+  --primary-color: #2e7d32; /* Forest Green */
+  --primary-light: #4caf50; /* Lighter shade of Forest Green */
+  --primary-dark: #1b5e20; /* Darker shade of Forest Green */
+  --secondary-color: #8d6e63; /* Earthy Brown */
+  --secondary-light: #a1887f; /* Lighter shade of Earthy Brown */
+  --accent-color: #1d9a21; /* Accent color (can be adjusted) */
+  --background-color: #faf3e0; /* Soft Cream */
+  --card-bg: #ffffff; /* White for cards */
+  --text-primary: #2e7d32; /* Forest Green for text */
+  --text-secondary: #5d4037; /* Darker Earthy Brown for secondary text */
+  --text-light: #8d6e63; /* Earthy Brown for light text */
+  --white: #ffffff; /* White */
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
   --border-radius: 8px;
@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: auto;
 }
 
 body {
@@ -46,15 +47,20 @@ button {
   transition: var(--transition);
 }
 
-/* Navigation Bar */
+/* Transparent Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--card-bg);
-  box-shadow: var(--shadow);
+  background-color: transparent; /* Transparent background */
   padding: 12px 5%;
   z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  background-color: var(--background-color); /* Forest Green with opacity */
+  box-shadow: var(--shadow);
 }
 
 .navbar-content {
@@ -63,17 +69,6 @@ button {
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-icon {
-  color: var(--primary-color);
-  font-size: 1.5rem;
 }
 
 .navbar .logo {
@@ -108,7 +103,7 @@ button {
 }
 
 .navbar .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .navbar .nav-links a:hover:after {
@@ -149,6 +144,24 @@ button {
   background-image: url("https://example.com/another-gif.gif"); /* Replace with your GIF URL */
 }
 
+/* Section Dividers */
+.section-divider {
+  background-color: var(--primary-dark); /* Darker shade of Forest Green */
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0 0 20px 20px; /* Rounded bottom edges */
+  margin-top: -1px; /* Ensure it overlaps slightly with the previous section */
+}
+
+.section-divider h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
 /* Overlay to make text readable */
 .section-with-bg::before {
   content: "";
@@ -157,7 +170,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+  background: rgba(250, 243, 224, 0.8); /* Soft Cream with opacity */
   z-index: -1;
 }
 
@@ -177,7 +190,40 @@ button {
   margin: 0 auto;
 }
 
-/* Rest of your CSS remains unchanged */
+/* Buttons */
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+}
+
+.secondary-btn {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.secondary-btn:hover {
+  background-color: rgba(46, 125, 50, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
 /* Hero Section */
 .hero-section {
@@ -1041,4 +1087,32 @@ footer {
   display: flex;
   gap: 10px;
   margin-top: 15px;
+}
+
+/* General Rounded Corners */
+.section-content,
+.compiler-container,
+.editor-section,
+.preview-section,
+.button-group,
+.tab-nav,
+.tab-link,
+.primary-btn,
+.secondary-btn,
+.ai-button {
+  border-radius: 20px; /* Increased border radius */
+}
+
+/* CodeMirror Editor */
+
+/* Buttons */
+.primary-btn,
+.secondary-btn,
+.ai-button {
+  border-radius: 30px; /* More rounded buttons */
+}
+
+/* Navbar */
+.navbar {
+  border-radius: 0 0 20px 20px; /* Rounded bottom edges */
 }
