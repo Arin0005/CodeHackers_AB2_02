@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Compiler</title>
+    <link rel="stylesheet" href="/frontend/styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CodeMirror CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <h1 class="logo">UI Compiler</h1>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#interactiveness">Interactiveness</a></li>
+          <li><a href="#compiler">Compiler</a></li>
+          <li><a href="#ui-builder">UI Builder</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-content">
+        <h2>About UI Compiler</h2>
+        <p>
+          The UI Compiler is a powerful tool that allows you to write HTML, CSS,
+          and JavaScript code and see the results in real-time. Whether you're a
+          beginner or an experienced developer, this tool helps you prototype
+          and test your ideas quickly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactiveness Section -->
+    <section id="interactiveness">
+      <div class="section-content">
+        <h2>Interactive & User-Friendly</h2>
+        <p>
+          Our compiler is designed to be intuitive and easy to use. With
+          separate code editors for HTML, CSS, and JavaScript, you can focus on
+          writing clean code while seeing the live preview update instantly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compiler Section -->
+    <section id="compiler">
+      <div class="section-content">
+        <h2>Start Coding</h2>
+        <!-- Navbar for Tabs -->
+        <nav class="tab-nav">
+          <button class="tab-link active" data-tab="html">HTML</button>
+          <button class="tab-link" data-tab="css">CSS</button>
+          <button class="tab-link" data-tab="js">JavaScript</button>
+        </nav>
+        <div class="compiler-container">
+          <!-- Code Editors -->
+          <div class="editor-section">
+            <div class="code-editor" id="html-editor">
+              <textarea
+                id="html"
+                placeholder="Write your HTML code here..."
+              ></textarea>
+            </div>
+            <div class="code-editor hidden" id="css-editor">
+              <textarea
+                id="css"
+                placeholder="Write your CSS code here..."
+              ></textarea>
+            </div>
+            <div class="code-editor hidden" id="js-editor">
+              <textarea
+                id="js"
+                placeholder="Write your JavaScript code here..."
+              ></textarea>
+            </div>
+            <button id="run-btn">Run Code</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+
+          <!-- Live Preview -->
+          <div class="preview-section">
+            <h3>Live Preview</h3>
+            <iframe id="preview"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI Builder Section -->
+    <section id="ui-builder">
+      <div class="section-content">
+        <h2>Drag-and-Drop UI Builder</h2>
+        <div class="ui-builder-container">
+          <!-- Toolbox -->
+          <div class="toolbox">
+            <h3>Toolbox</h3>
+            <div class="toolbox-items">
+              <div class="toolbox-item" draggable="true" data-type="button">
+                Button
+              </div>
+              <div class="toolbox-item" draggable="true" data-type="text">
+                Text Field
+              </div>
+              <div class="toolbox-item" draggable="true" data-type="image">
+                Image
+              </div>
+              <div class="toolbox-item" draggable="true" data-type="form">
+                Form
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="canvas" id="canvas">
+            <h3>Canvas</h3>
+            <div class="canvas-content"></div>
+          </div>
+
+          <!-- Styling Options -->
+          <div class="styling-options">
+            <h3>Styling Options</h3>
+            <div class="styling-form">
+              <label for="color">Background Color</label>
+              <input type="color" id="color" />
+              <label for="font-size">Font Size</label>
+              <input type="number" id="font-size" min="10" max="50" />
+              <label for="border">Border</label>
+              <input
+                type="text"
+                id="border"
+                placeholder="e.g., 1px solid black"
+              />
+              <button id="apply-styles">Apply Styles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 UI Compiler. All rights reserved.</p>
+    </footer>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="/frontend/script.js"></script>
+  </body>
+</html>
