@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Compiler</title>
+    <link rel="stylesheet" href="/fontend/styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <h1>UI Compiler</h1>
+        <p>Build, Test, and Preview Your UI in Real-Time</p>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-content">
+        <h2>About UI Compiler</h2>
+        <p>
+          The UI Compiler is a powerful tool that allows you to write HTML, CSS,
+          and JavaScript code and see the results in real-time. Whether you're a
+          beginner or an experienced developer, this tool helps you prototype
+          and test your ideas quickly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactiveness Section -->
+    <section id="interactiveness">
+      <div class="section-content">
+        <h2>Interactive & User-Friendly</h2>
+        <p>
+          Our compiler is designed to be intuitive and easy to use. With
+          separate code editors for HTML, CSS, and JavaScript, you can focus on
+          writing clean code while seeing the live preview update instantly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compiler Section -->
+    <section id="compiler">
+      <div class="section-content">
+        <h2>Start Coding</h2>
+        <div class="compiler-container">
+          <!-- Code Editors -->
+          <div class="editor-section">
+            <div class="code-editor">
+              <label for="html">HTML</label>
+              <textarea
+                id="html"
+                placeholder="Write your HTML code here..."
+              ></textarea>
+            </div>
+            <div class="code-editor">
+              <label for="css">CSS</label>
+              <textarea
+                id="css"
+                placeholder="Write your CSS code here..."
+              ></textarea>
+            </div>
+            <div class="code-editor">
+              <label for="js">JavaScript</label>
+              <textarea
+                id="js"
+                placeholder="Write your JavaScript code here..."
+              ></textarea>
+            </div>
+            <button id="run-btn">Run Code</button>
+          </div>
+
+          <!-- Live Preview -->
+          <div class="preview-section">
+            <h3>Live Preview</h3>
+            <iframe id="preview"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 UI Compiler. All rights reserved.</p>
+    </footer>
+
+    <script src="/fontend/script.js"></script>
+  </body>
+</html>
