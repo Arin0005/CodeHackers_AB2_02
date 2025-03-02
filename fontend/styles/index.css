@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #f9934a;
+  background-color: #000000;
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -40,12 +40,12 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #6200ea;
+  color: #000000;
 }
 
 p {
   font-size: 1rem;
-  color: #555;
+  color: #000000;
 }
 
 /* Compiler Section */
@@ -77,7 +77,7 @@ p {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #6200ea;
+  color: #ffffff;
 }
 
 .code-editor textarea {
@@ -92,7 +92,7 @@ p {
 }
 
 #run-btn {
-  background-color: #6200ea;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -104,12 +104,12 @@ p {
 }
 
 #run-btn:hover {
-  background-color: #3700b3;
+  background-color: #000000;
 }
 
 .preview-section h3 {
   margin-top: 0;
-  color: #6200ea;
+  color: #ffffff;
 }
 
 iframe {
@@ -124,6 +124,6 @@ iframe {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #6200ea;
+  background-color: #000000;
   color: white;
 }

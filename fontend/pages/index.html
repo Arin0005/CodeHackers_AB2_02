@@ -12,43 +12,184 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="header-content">
-        <h1>UI Compiler</h1>
-        <p>Build, Test, and Preview Your UI in Real-Time</p>
-      </div>
-    </header>
+    <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>UI Compiler</title>
+          <style>
+              body {
+                  margin: 0;
+                  font-family: Arial, sans-serif;
+              }
+              header {
+                  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+                  color: white;
+                  text-align: center;
+                  padding: 50px 20px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                  position: relative;
+              }
+              .header-content h1 {
+                  font-size: 3rem;
+                  margin: 0;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+              }
+              .header-content p {
+                  font-size: 1.2rem;
+                  margin-top: 10px;
+                  opacity: 0.9;
+              }
+              .header-content::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -10px;
+                  left: 50%;
+                  width: 80px;
+                  height: 4px;
+                  background: white;
+                  transform: translateX(-50%);
+                  border-radius: 2px;
+              }
+          </style>
+      </head>
+      <body>
+      
+          <header>
+              <div class="header-content">
+                  <h1>UI COMPILER</h1>
+                  <p>Build, Test, and Preview Your UI in Real-Time</p>
+              </div>
+          </header>
+      
+      </body>
+      </html>
 
     <!-- About Section -->
     <section id="about">
       <div class="section-content">
-        <h2>About UI Compiler</h2>
-        <p>
-          The UI Compiler is a powerful tool that allows you to write HTML, CSS,
-          and JavaScript code and see the results in real-time. Whether you're a
-          beginner or an experienced developer, this tool helps you prototype
-          and test your ideas quickly.
-        </p>
+          <h2>About UI Compiler</h2>
+          <p>
+              The UI Compiler is a powerful tool that allows you to write HTML, CSS,
+              and JavaScript code and see the results in real-time. Whether you're a
+              beginner or an experienced developer, this tool helps you prototype
+              and test your ideas quickly.
+          </p>
       </div>
-    </section>
-
+  </section>
+  <style>
+      #about {
+          background: linear-gradient(135deg, #ff7eb3, #6e45e2);
+          padding: 60px 20px;
+          text-align: center;
+          color: white;
+          border-radius: 12px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          width: 80%;
+          margin: 50px auto;
+          transition: transform 0.3s ease-in-out;
+      }
+  
+      #about:hover {
+          transform: scale(1.05);
+      }
+  
+      .section-content h2 {
+          font-size: 2.8rem;
+          margin-bottom: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+      }
+  
+      .section-content p {
+          font-size: 1.2rem;
+          line-height: 1.7;
+          max-width: 700px;
+          margin: 0 auto;
+          opacity: 0.9;
+      }
+  </style>
     <!-- Interactiveness Section -->
     <section id="interactiveness">
       <div class="section-content">
-        <h2>Interactive & User-Friendly</h2>
-        <p>
-          Our compiler is designed to be intuitive and easy to use. With
-          separate code editors for HTML, CSS, and JavaScript, you can focus on
-          writing clean code while seeing the live preview update instantly.
-        </p>
+          <h2>Interactive & User-Friendly</h2>
+          <p>
+              Our compiler is designed to be intuitive and easy to use. With
+              separate code editors for HTML, CSS, and JavaScript, you can focus on
+              writing clean code while seeing the live preview update instantly.
+          </p>
       </div>
-    </section>
+  </section>
+  
+  <style>
+      #interactiveness {
+          background: linear-gradient(135deg, #00c6ff, #0072ff);
+          padding: 60px 30px;
+          text-align: center;
+          color: white;
+          border-radius: 15px;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+          width: 85%;
+          max-width: 800px;
+          margin: 50px auto;
+          position: relative;
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+  
+      #interactiveness:hover {
+          transform: scale(1.05);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+  
+      #interactiveness::before {
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          top: -10%;
+          left: -10%;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 70%);
+          animation: glow-animation 6s linear infinite;
+      }
+  
+      @keyframes glow-animation {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+  
+      .section-content h2 {
+          font-size: 2.8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          background: linear-gradient(90deg, #fff, #f2f2f2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+  
+      .section-content p {
+          font-size: 1.2rem;
+          line-height: 1.7;
+          max-width: 650px;
+          margin: 0 auto;
+          opacity: 0.9;
+      }
+  </style>
+  
 
     <!-- Compiler Section -->
     <section id="compiler">
       <div class="section-content">
-        <h2>Start Coding</h2>
-        <div class="compiler-container">
+          <h2>🚀 Start Coding</h2>
+          <div class="compiler-container">
+              <p>Write your HTML, CSS, and JavaScript code below and see real-time updates.</p>
+          </div>
+      </div>
+  </section>
+  
           <!-- Code Editors -->
           <div class="editor-section">
             <div class="code-editor">
